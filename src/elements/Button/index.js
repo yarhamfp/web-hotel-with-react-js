@@ -20,10 +20,10 @@ export default function Button(props) {
         {props.isLoading ? (
           <>
             <span className="spinner-border spinner-border-sm mx-5"></span>
-            <span className="xr-only">Loading...</span>
+            <span className="sr-only">Loading...</span>
           </>
         ) : (
-          props.childern
+          props.children
         )}
       </span>
     );
@@ -38,7 +38,7 @@ export default function Button(props) {
           target={props.target === "_blank" ? "_blank" : undefined}
           rel={props.target === "_blank" ? "noopener noreferrer" : undefined}
         >
-          {props.childern}
+          {props.children}
         </a>
       );
     } else {
@@ -49,7 +49,7 @@ export default function Button(props) {
           style={props.style}
           onClick={onClick}
         >
-          {props.childern}
+          {props.children}
         </Link>
       );
     }
@@ -60,7 +60,7 @@ export default function Button(props) {
       style={props.style}
       onClick={onClick}
     >
-      {props.childern}
+      {props.children}
     </button>
   );
 }
